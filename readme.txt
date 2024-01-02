@@ -32,3 +32,11 @@ In config/filesystems.php, you could do this... change the root element in publi
 other project downloaded on local
 
 cd projectname, then composer update, so that it will upload all dependiencies
+
+==================================
+getcomposer
+
+composer global require laravel/installer
+cd 
+laravel new blog
+php artisan serve
