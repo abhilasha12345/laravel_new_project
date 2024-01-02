@@ -40,3 +40,29 @@ composer global require laravel/installer
 cd 
 laravel new blog
 php artisan serve
+=====================================================
+views\layouts\---footer.blade.php,header.blade.php,main.blade.php
+views\home.blade.php
+
+main.blade.php
+@include('layouts.header')
+<div class="container">
+	@yield('main-section')
+</div>
+@include('layouts.footer')
+
+home.blade.php
+
+@extends('layouts.main')
+@push('title')
+	<title>Home</title>
+@endpush
+@section('main-section')
+<h1 class="text-center">
+	Home Page
+</h1>
+@endsection
+
+header.blade.php
+
+@stack('title')
